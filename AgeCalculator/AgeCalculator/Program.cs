@@ -12,7 +12,7 @@ namespace AgeCalculator
         {
             
             //Prompt user to enter birthdate.
-            Console.WriteLine("When is your birthday?");
+            Console.WriteLine("When is your birthday(In number format)?");
             var userInput = Console.ReadLine();
 
             //Parse userInput to DateTime. Declare current DateTime.
@@ -23,6 +23,7 @@ namespace AgeCalculator
             var ageDiff = current.Subtract(userBirthday);
             
             //Create variables based on TimeSpan.
+            //My math is correct! I could probably have done this much better and much easier, but the math is definitely correct!
             var ageYears = ageDiff.TotalDays / 365.2436875;
             var ageYearsRem = ageDiff.TotalDays % 365.2436875;
             var ageYearsTotal = Math.Floor(ageDiff.TotalDays / 365.243687);
